@@ -1,0 +1,16 @@
+M NRTYPE,#h("../../nrtype.f90",1)
+ T sprs2_sp,NRTYPE_DT_sprs2_sp,#d("../../nrtype.f90",24)
+  C N,n,Integer,int,120,,0,#c("../../nrtype.f90",25)
+  C LEN,len,Integer,int,124,,0,#c("../../nrtype.f90",25)
+  C VAL,val,Real,float,0,p,1,d(*:*),#c("../../nrtype.f90",26)
+  C IROW,irow,Integer,int,40,p,1,d(*:*),#c("../../nrtype.f90",27)
+  C JCOL,jcol,Integer,int,80,p,1,d(*:*),#c("../../nrtype.f90",28)
+ ET
+ T sprs2_dp,NRTYPE_DT_sprs2_dp,#d("../../nrtype.f90",31)
+  C N,n,Integer,int,120,,0,#c("../../nrtype.f90",32)
+  C LEN,len,Integer,int,124,,0,#c("../../nrtype.f90",32)
+  C VAL,val,Real(Kind=2),double,0,p,1,d(*:*),#c("../../nrtype.f90",33)
+  C IROW,irow,Integer,int,40,p,1,d(*:*),#c("../../nrtype.f90",34)
+  C JCOL,jcol,Integer,int,80,p,1,d(*:*),#c("../../nrtype.f90",35)
+ ET
+EM

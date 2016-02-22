@@ -1,0 +1,18 @@
+S EULSUM,EULSUM,#h("evalFunctions.f90",1)
+ V SUM,sum,Real,float,d,0,#t("evalFunctions.f90",4)
+ V TERM,term,Real,float,d,0,#t("evalFunctions.f90",5)
+ V JTERM,jterm,Integer,int,d,0,#t("evalFunctions.f90",6)
+ V WKSP,wksp,Real,float,p,1,d(*:*),#t("evalFunctions.f90",14)
+ V NTERM,nterm,Integer,int,,0,#t("evalFunctions.f90",15)
+ V INIT,init,Logical,int,,0,#t("evalFunctions.f90",16)
+ES
+S DDPOLY,DDPOLY,#h("evalFunctions.f90",41)
+ V C,c,Real,float,d,1,d(1:*),#t("evalFunctions.f90",45)
+ V PD,pd,Real,float,d,1,d(1:*),#t("evalFunctions.f90",46)
+ V I,i,Integer,int,,0,#t("evalFunctions.f90",51)
+ V NC,nc,Integer,int,,0,#t("evalFunctions.f90",51)
+ V ND,nd,Integer,int,,0,#t("evalFunctions.f90",51)
+ V FAC,fac,Real,float,,1,i(1:*),#t("evalFunctions.f90",52)
+ V D,d,Real,float,,1,i(1:*),#t("evalFunctions.f90",53)
+ V X,x,Real,float,d,0,#t("evalFunctions.f90",44)
+ES

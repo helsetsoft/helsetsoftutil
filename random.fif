@@ -1,0 +1,99 @@
+M RANDOM,#h("random.f90",1)
+ S RAN0_S,RANDOM_MP_ran0_s,#h("random.f90",56)
+  V RANS,RAN_STATE_MP_rans,Integer,int,,0
+  V NRAN0,RAN_STATE_MP_nran0,Integer,int,,0
+  V KRAN0,RAN_STATE_MP_kran0,Integer,int,,0
+  V HARVEST,harvest,Real,float,d,0,#t("random.f90",60)
+  V AMM,RAN_STATE_MP_amm,Real,float,,0
+  V JRAN0,RAN_STATE_MP_jran0,Integer,int,,0
+  V IRAN0,RAN_STATE_MP_iran0,Integer,int,,0
+  V LENRAN,RAN_STATE_MP_lenran,Integer,int,,0
+ ES
+ S RAN0_V,RANDOM_MP_ran0_v,#h("random.f90",82)
+  V HARVEST,harvest,Real,float,d,1,d(1:*),#t("random.f90",86)
+  V N,n,Integer,int,,0,#t("random.f90",87)
+  V AMM,RAN_STATE_MP_amm,Real,float,,0
+  V LENRAN,RAN_STATE_MP_lenran,Integer,int,,0
+  V RANV,RAN_STATE_MP_ranv,Integer,int,p,1,d(*:*)
+  V NRAN,RAN_STATE_MP_nran,Integer,int,p,1,d(*:*)
+  V KRAN,RAN_STATE_MP_kran,Integer,int,p,1,d(*:*)
+  V JRAN,RAN_STATE_MP_jran,Integer,int,p,1,d(*:*)
+  V IRAN,RAN_STATE_MP_iran,Integer,int,p,1,d(*:*)
+ ES
+ S RAN1_S,RANDOM_MP_ran1_s,#h("random.f90",103)
+  V RANS,RAN_STATE_MP_rans,Integer,int,,0
+  V MRAN0,RAN_STATE_MP_mran0,Integer,int,,0
+  V NRAN0,RAN_STATE_MP_nran0,Integer,int,,0
+  V KRAN0,RAN_STATE_MP_kran0,Integer,int,,0
+  V HARVEST,harvest,Real,float,d,0,#t("random.f90",108)
+  V AMM,RAN_STATE_MP_amm,Real,float,,0
+  V JRAN0,RAN_STATE_MP_jran0,Integer,int,,0
+  V IRAN0,RAN_STATE_MP_iran0,Integer,int,,0
+  V LENRAN,RAN_STATE_MP_lenran,Integer,int,,0
+ ES
+ S RAN1_V,RANDOM_MP_ran1_v,#h("random.f90",135)
+  V HARVEST,harvest,Real,float,d,1,d(1:*),#t("random.f90",140)
+  V N,n,Integer,int,,0,#t("random.f90",141)
+  V AMM,RAN_STATE_MP_amm,Real,float,,0
+  V LENRAN,RAN_STATE_MP_lenran,Integer,int,,0
+  V RANV,RAN_STATE_MP_ranv,Integer,int,p,1,d(*:*)
+  V MRAN,RAN_STATE_MP_mran,Integer,int,p,1,d(*:*)
+  V NRAN,RAN_STATE_MP_nran,Integer,int,p,1,d(*:*)
+  V KRAN,RAN_STATE_MP_kran,Integer,int,p,1,d(*:*)
+  V JRAN,RAN_STATE_MP_jran,Integer,int,p,1,d(*:*)
+  V IRAN,RAN_STATE_MP_iran,Integer,int,p,1,d(*:*)
+ ES
+ S RAN2_S,RANDOM_MP_ran2_s,#h("random.f90",159)
+  V RANS,RAN_STATE_MP_rans,Integer,int,,0
+  V MRAN0,RAN_STATE_MP_mran0,Integer,int,,0
+  V NRAN0,RAN_STATE_MP_nran0,Integer,int,,0
+  V KRAN0,RAN_STATE_MP_kran0,Integer,int,,0
+  V HARVEST,harvest,Real,float,d,0,#t("random.f90",164)
+  V AMM,RAN_STATE_MP_amm,Real,float,,0
+  V JRAN0,RAN_STATE_MP_jran0,Integer,int,,0
+  V IRAN0,RAN_STATE_MP_iran0,Integer,int,,0
+  V LENRAN,RAN_STATE_MP_lenran,Integer,int,,0
+ ES
+ S RAN2_V,RANDOM_MP_ran2_v,#h("random.f90",191)
+  V HARVEST,harvest,Real,float,d,1,d(1:*),#t("random.f90",196)
+  V N,n,Integer,int,,0,#t("random.f90",197)
+  V AMM,RAN_STATE_MP_amm,Real,float,,0
+  V LENRAN,RAN_STATE_MP_lenran,Integer,int,,0
+  V RANV,RAN_STATE_MP_ranv,Integer,int,p,1,d(*:*)
+  V MRAN,RAN_STATE_MP_mran,Integer,int,p,1,d(*:*)
+  V NRAN,RAN_STATE_MP_nran,Integer,int,p,1,d(*:*)
+  V KRAN,RAN_STATE_MP_kran,Integer,int,p,1,d(*:*)
+  V JRAN,RAN_STATE_MP_jran,Integer,int,p,1,d(*:*)
+  V IRAN,RAN_STATE_MP_iran,Integer,int,p,1,d(*:*)
+ ES
+ S GASDEV_S,RANDOM_MP_gasdev_s,#h("random.f90",216)
+  V HARVEST,harvest,Real,float,d,0,#t("random.f90",219)
+  V RSQ,rsq,Real,float,,0,#t("random.f90",222)
+  V V1,v1,Real,float,,0,#t("random.f90",222)
+  V V2,v2,Real,float,,0,#t("random.f90",222)
+  V G,g,Real,float,,0,#t("random.f90",223)
+  V GAUS_STORED,gaus_stored,Logical,int,,0,#t("random.f90",224)
+ ES
+ S GASDEV_V,RANDOM_MP_gasdev_v,#h("random.f90",244)
+  V M,m,Integer,int,,0,#t("random.f90",250)
+  V MASK,mask,Logical,int,,1,i(1:*),#t("random.f90",253)
+  V HARVEST,harvest,Real,float,d,1,d(1:*),#t("random.f90",247)
+  V N,n,Integer,int,,0,#t("random.f90",250)
+  V RSQ,rsq,Real,float,,1,i(1:*),#t("random.f90",248)
+  V V1,v1,Real,float,,1,i(1:*),#t("random.f90",248)
+  V V2,v2,Real,float,,1,i(1:*),#t("random.f90",248)
+  V G,g,Real,float,a,1,a(*:*),#t("random.f90",249)
+  V GAUS_STORED,gaus_stored,Logical,int,,0,#t("random.f90",252)
+  V NN,nn,Integer,int,,0,#t("random.f90",250)
+  V NG,ng,Integer,int,,0,#t("random.f90",250)
+  V LAST_ALLOCATED,last_allocated,Integer,int,,0,#t("random.f90",251)
+ ES
+ F RAN,RANDOM_MP_ran,#h("random.f90",25),#t("random.f90",29)
+  V RAN,RANDOM_MP_ranResult,Real,float,,0,#t("random.f90",29)
+  V IDUM,idum,Integer,int,d,0,#t("random.f90",28)
+  V AM,am,Real,float,,0,#t("random.f90",38)
+  V IX,ix,Integer,int,,0,#t("random.f90",39)
+  V IY,iy,Integer,int,,0,#t("random.f90",39)
+  V K,k,Integer,int,,0,#t("random.f90",39)
+ EF
+EM

@@ -1,0 +1,7 @@
+S TEST,TEST,#h("test.f90",1)
+ES
+S TEST1,TEST1,#h("test.f90",6)
+ES
+F TEST2,TEST2,#h("test.f90",10),#t("test.f90",11)
+ V TEST2,TEST2Result,Real,float,,0,#t("test.f90",11)
+EF

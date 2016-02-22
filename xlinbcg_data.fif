@@ -1,0 +1,10 @@
+M XLINBCG_DATA,#h("../../xlinbcg_data.f90",1)
+ T sprs2_dp,NRTYPE_DT_sprs2_dp
+  C N,n,Integer,int,120,,0
+  C LEN,len,Integer,int,124,,0
+  C VAL,val,Real(Kind=2),double,0,p,1,d(*:*)
+  C IROW,irow,Integer,int,40,p,1,d(*:*)
+  C JCOL,jcol,Integer,int,80,p,1,d(*:*)
+ ET
+ V SA,XLINBCG_DATA_MP_sa,Type(sprs2_dp),NRTYPE_DT_sprs2_dp,,0,#t("../../xlinbcg_data.f90",3)
+EM
