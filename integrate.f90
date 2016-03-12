@@ -30,6 +30,39 @@ end if
 END SUBROUTINE trapzd
 
 
+SUBROUTINE trapzd3(func,r,z,a,b,s,n)
+USE nrtype; USE nrutil, ONLY: arth
+IMPLICIT NONE
+REAL(SP),INTENT(IN):: r,z,a,b
+REAL(SP),INTENT(INOUT):: s
+INTEGER(I4B),INTENT(IN):: n
+INTERFACE
+	FUNCTION func(x,r,z)
+	USE nrtype
+	REAL(SP),DIMENSION(:),INTENT(IN):: x
+	REAL(SP),INTENT(IN):: r,z
+	REAL(SP),DIMENSION(size(x)):: func
+	END FUNCTION func
+END INTERFACE
+! This routine computes the nth stage of refinement of an extended trapeziodal
+! rule. func is input as the name of the function to be integrated between
+! limits a and b, also input. When called with n=1, the routine returns as s 
+! the crudest estimate of int_a^b f(x)dx. Subsequent calls with n=2,3,.. (in
+! that sequential order) will improve the accuracy of s by adding 2^(n-2) additional
+! interior points, a should not be modified between sequential calls.
+REAL(SP):: del,fsum
+INTEGER(I4B):: it
+if(n==1) then
+	s=0.5_sp*(b-a)*sum(func((/ a,b /),r,z))
+else
+	it=2**(n-2)
+	del=(b-a)/it	! This is the spacing of the points to be added.
+	fsum=sum(func(arth(a+0.5_sp*del,del,it),r,z))
+	s=0.5_sp*(s+del*fsum)	! This replaces s by its refined value.
+end if
+END SUBROUTINE trapzd3
+
+
 FUNCTION qtrap(func,a,b)
 USE nrtype; USE nrutil, ONLY: nrerror
 IMPLICIT NONE
